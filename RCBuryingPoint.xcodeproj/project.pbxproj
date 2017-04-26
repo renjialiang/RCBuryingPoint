@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB6FC2471EB0DE1500F06835 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2461EB0DE1500F06835 /* main.m */; };
+		DB6FC24A1EB0DE1500F06835 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2491EB0DE1500F06835 /* AppDelegate.m */; };
+		DB6FC24D1EB0DE1500F06835 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC24C1EB0DE1500F06835 /* ViewController.m */; };
+		DB6FC2501EB0DE1500F06835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6FC24E1EB0DE1500F06835 /* Main.storyboard */; };
+		DB6FC2521EB0DE1500F06835 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6FC2511EB0DE1500F06835 /* Assets.xcassets */; };
+		DB6FC2551EB0DE1500F06835 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6FC2531EB0DE1500F06835 /* LaunchScreen.storyboard */; };
+		DB6FC2601EB0DE1500F06835 /* RCBuryingPointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC25F1EB0DE1500F06835 /* RCBuryingPointTests.m */; };
+		DB6FC26B1EB0DE1500F06835 /* RCBuryingPointUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC26A1EB0DE1500F06835 /* RCBuryingPointUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB6FC25C1EB0DE1500F06835 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB6FC23A1EB0DE1500F06835 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB6FC2411EB0DE1500F06835;
+			remoteInfo = RCBuryingPoint;
+		};
+		DB6FC2671EB0DE1500F06835 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB6FC23A1EB0DE1500F06835 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB6FC2411EB0DE1500F06835;
+			remoteInfo = RCBuryingPoint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB6FC2421EB0DE1500F06835 /* RCBuryingPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCBuryingPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6FC2461EB0DE1500F06835 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB6FC2481EB0DE1500F06835 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DB6FC2491EB0DE1500F06835 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DB6FC24B1EB0DE1500F06835 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DB6FC24C1EB0DE1500F06835 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DB6FC24F1EB0DE1500F06835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB6FC2511EB0DE1500F06835 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB6FC2541EB0DE1500F06835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB6FC2561EB0DE1500F06835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6FC25B1EB0DE1500F06835 /* RCBuryingPointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCBuryingPointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6FC25F1EB0DE1500F06835 /* RCBuryingPointTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCBuryingPointTests.m; sourceTree = "<group>"; };
+		DB6FC2611EB0DE1500F06835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6FC2661EB0DE1500F06835 /* RCBuryingPointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCBuryingPointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6FC26A1EB0DE1500F06835 /* RCBuryingPointUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCBuryingPointUITests.m; sourceTree = "<group>"; };
+		DB6FC26C1EB0DE1500F06835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB6FC23F1EB0DE1500F06835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6FC2581EB0DE1500F06835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6FC2631EB0DE1500F06835 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB6FC2391EB0DE1500F06835 = {
+			isa = PBXGroup;
+			children = (
+				DB6FC2441EB0DE1500F06835 /* RCBuryingPoint */,
+				DB6FC25E1EB0DE1500F06835 /* RCBuryingPointTests */,
+				DB6FC2691EB0DE1500F06835 /* RCBuryingPointUITests */,
+				DB6FC2431EB0DE1500F06835 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB6FC2431EB0DE1500F06835 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FC2421EB0DE1500F06835 /* RCBuryingPoint.app */,
+				DB6FC25B1EB0DE1500F06835 /* RCBuryingPointTests.xctest */,
+				DB6FC2661EB0DE1500F06835 /* RCBuryingPointUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB6FC2441EB0DE1500F06835 /* RCBuryingPoint */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FC2481EB0DE1500F06835 /* AppDelegate.h */,
+				DB6FC2491EB0DE1500F06835 /* AppDelegate.m */,
+				DB6FC24B1EB0DE1500F06835 /* ViewController.h */,
+				DB6FC24C1EB0DE1500F06835 /* ViewController.m */,
+				DB6FC24E1EB0DE1500F06835 /* Main.storyboard */,
+				DB6FC2511EB0DE1500F06835 /* Assets.xcassets */,
+				DB6FC2531EB0DE1500F06835 /* LaunchScreen.storyboard */,
+				DB6FC2561EB0DE1500F06835 /* Info.plist */,
+				DB6FC2451EB0DE1500F06835 /* Supporting Files */,
+			);
+			path = RCBuryingPoint;
+			sourceTree = "<group>";
+		};
+		DB6FC2451EB0DE1500F06835 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FC2461EB0DE1500F06835 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB6FC25E1EB0DE1500F06835 /* RCBuryingPointTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FC25F1EB0DE1500F06835 /* RCBuryingPointTests.m */,
+				DB6FC2611EB0DE1500F06835 /* Info.plist */,
+			);
+			path = RCBuryingPointTests;
+			sourceTree = "<group>";
+		};
+		DB6FC2691EB0DE1500F06835 /* RCBuryingPointUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FC26A1EB0DE1500F06835 /* RCBuryingPointUITests.m */,
+				DB6FC26C1EB0DE1500F06835 /* Info.plist */,
+			);
+			path = RCBuryingPointUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB6FC2411EB0DE1500F06835 /* RCBuryingPoint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB6FC26F1EB0DE1500F06835 /* Build configuration list for PBXNativeTarget "RCBuryingPoint" */;
+			buildPhases = (
+				DB6FC23E1EB0DE1500F06835 /* Sources */,
+				DB6FC23F1EB0DE1500F06835 /* Frameworks */,
+				DB6FC2401EB0DE1500F06835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCBuryingPoint;
+			productName = RCBuryingPoint;
+			productReference = DB6FC2421EB0DE1500F06835 /* RCBuryingPoint.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB6FC25A1EB0DE1500F06835 /* RCBuryingPointTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB6FC2721EB0DE1500F06835 /* Build configuration list for PBXNativeTarget "RCBuryingPointTests" */;
+			buildPhases = (
+				DB6FC2571EB0DE1500F06835 /* Sources */,
+				DB6FC2581EB0DE1500F06835 /* Frameworks */,
+				DB6FC2591EB0DE1500F06835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB6FC25D1EB0DE1500F06835 /* PBXTargetDependency */,
+			);
+			name = RCBuryingPointTests;
+			productName = RCBuryingPointTests;
+			productReference = DB6FC25B1EB0DE1500F06835 /* RCBuryingPointTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB6FC2651EB0DE1500F06835 /* RCBuryingPointUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB6FC2751EB0DE1500F06835 /* Build configuration list for PBXNativeTarget "RCBuryingPointUITests" */;
+			buildPhases = (
+				DB6FC2621EB0DE1500F06835 /* Sources */,
+				DB6FC2631EB0DE1500F06835 /* Frameworks */,
+				DB6FC2641EB0DE1500F06835 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB6FC2681EB0DE1500F06835 /* PBXTargetDependency */,
+			);
+			name = RCBuryingPointUITests;
+			productName = RCBuryingPointUITests;
+			productReference = DB6FC2661EB0DE1500F06835 /* RCBuryingPointUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB6FC23A1EB0DE1500F06835 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = RenJialiang;
+				TargetAttributes = {
+					DB6FC2411EB0DE1500F06835 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+					DB6FC25A1EB0DE1500F06835 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DB6FC2411EB0DE1500F06835;
+					};
+					DB6FC2651EB0DE1500F06835 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DB6FC2411EB0DE1500F06835;
+					};
+				};
+			};
+			buildConfigurationList = DB6FC23D1EB0DE1500F06835 /* Build configuration list for PBXProject "RCBuryingPoint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB6FC2391EB0DE1500F06835;
+			productRefGroup = DB6FC2431EB0DE1500F06835 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB6FC2411EB0DE1500F06835 /* RCBuryingPoint */,
+				DB6FC25A1EB0DE1500F06835 /* RCBuryingPointTests */,
+				DB6FC2651EB0DE1500F06835 /* RCBuryingPointUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB6FC2401EB0DE1500F06835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6FC2551EB0DE1500F06835 /* LaunchScreen.storyboard in Resources */,
+				DB6FC2521EB0DE1500F06835 /* Assets.xcassets in Resources */,
+				DB6FC2501EB0DE1500F06835 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6FC2591EB0DE1500F06835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6FC2641EB0DE1500F06835 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB6FC23E1EB0DE1500F06835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6FC24D1EB0DE1500F06835 /* ViewController.m in Sources */,
+				DB6FC24A1EB0DE1500F06835 /* AppDelegate.m in Sources */,
+				DB6FC2471EB0DE1500F06835 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6FC2571EB0DE1500F06835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6FC2601EB0DE1500F06835 /* RCBuryingPointTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6FC2621EB0DE1500F06835 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6FC26B1EB0DE1500F06835 /* RCBuryingPointUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB6FC25D1EB0DE1500F06835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB6FC2411EB0DE1500F06835 /* RCBuryingPoint */;
+			targetProxy = DB6FC25C1EB0DE1500F06835 /* PBXContainerItemProxy */;
+		};
+		DB6FC2681EB0DE1500F06835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB6FC2411EB0DE1500F06835 /* RCBuryingPoint */;
+			targetProxy = DB6FC2671EB0DE1500F06835 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB6FC24E1EB0DE1500F06835 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB6FC24F1EB0DE1500F06835 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB6FC2531EB0DE1500F06835 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB6FC2541EB0DE1500F06835 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB6FC26D1EB0DE1500F06835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB6FC26E1EB0DE1500F06835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB6FC2701EB0DE1500F06835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RCBuryingPoint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rc.RCBuryingPoint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DB6FC2711EB0DE1500F06835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RCBuryingPoint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rc.RCBuryingPoint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DB6FC2731EB0DE1500F06835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RCBuryingPointTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rc.RCBuryingPointTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCBuryingPoint.app/RCBuryingPoint";
+			};
+			name = Debug;
+		};
+		DB6FC2741EB0DE1500F06835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RCBuryingPointTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rc.RCBuryingPointTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCBuryingPoint.app/RCBuryingPoint";
+			};
+			name = Release;
+		};
+		DB6FC2761EB0DE1500F06835 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RCBuryingPointUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rc.RCBuryingPointUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RCBuryingPoint;
+			};
+			name = Debug;
+		};
+		DB6FC2771EB0DE1500F06835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RCBuryingPointUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rc.RCBuryingPointUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RCBuryingPoint;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB6FC23D1EB0DE1500F06835 /* Build configuration list for PBXProject "RCBuryingPoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6FC26D1EB0DE1500F06835 /* Debug */,
+				DB6FC26E1EB0DE1500F06835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB6FC26F1EB0DE1500F06835 /* Build configuration list for PBXNativeTarget "RCBuryingPoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6FC2701EB0DE1500F06835 /* Debug */,
+				DB6FC2711EB0DE1500F06835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB6FC2721EB0DE1500F06835 /* Build configuration list for PBXNativeTarget "RCBuryingPointTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6FC2731EB0DE1500F06835 /* Debug */,
+				DB6FC2741EB0DE1500F06835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB6FC2751EB0DE1500F06835 /* Build configuration list for PBXNativeTarget "RCBuryingPointUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6FC2761EB0DE1500F06835 /* Debug */,
+				DB6FC2771EB0DE1500F06835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB6FC23A1EB0DE1500F06835 /* Project object */;
+}
