@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
 
+@property (nonatomic, weak) IBOutlet UITableView *table;
 
+@property (nonatomic, weak) IBOutlet UICollectionView *collection;
+
+@property (nonatomic, weak) IBOutlet UIButton *btn1;
+
+@property (nonatomic, weak) IBOutlet UIButton *btn2;
+
+- (IBAction)saveDetailText:(id)sender;
+
+- (IBAction)btnSendMessage:(id)sender;
 @end
 

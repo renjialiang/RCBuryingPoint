@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2854131EB0E96A00B4D704 /* UITableView+BuryingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2854121EB0E96A00B4D704 /* UITableView+BuryingPoint.m */; };
+		DB2854151EB0F20000B4D704 /* detailPointText.json in Resources */ = {isa = PBXBuildFile; fileRef = DB2854141EB0F20000B4D704 /* detailPointText.json */; };
+		DB5F87391EC0A8EE00EB70F3 /* RCBPTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5F87381EC0A8EE00EB70F3 /* RCBPTableModel.m */; };
 		DB6FC2471EB0DE1500F06835 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2461EB0DE1500F06835 /* main.m */; };
 		DB6FC24A1EB0DE1500F06835 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2491EB0DE1500F06835 /* AppDelegate.m */; };
 		DB6FC24D1EB0DE1500F06835 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC24C1EB0DE1500F06835 /* ViewController.m */; };
@@ -15,6 +18,14 @@
 		DB6FC2551EB0DE1500F06835 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6FC2531EB0DE1500F06835 /* LaunchScreen.storyboard */; };
 		DB6FC2601EB0DE1500F06835 /* RCBuryingPointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC25F1EB0DE1500F06835 /* RCBuryingPointTests.m */; };
 		DB6FC26B1EB0DE1500F06835 /* RCBuryingPointUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC26A1EB0DE1500F06835 /* RCBuryingPointUITests.m */; };
+		DB6FC27B1EB0DE9800F06835 /* RCBPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC27A1EB0DE9800F06835 /* RCBPConfig.m */; };
+		DB6FC2941EB0DF8900F06835 /* RCBPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2931EB0DF8900F06835 /* RCBPManager.m */; };
+		DB6FC2971EB0E2ED00F06835 /* RCBPBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2961EB0E2ED00F06835 /* RCBPBaseModel.m */; };
+		DB6FC29A1EB0E49700F06835 /* UIView+BuryingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2991EB0E49700F06835 /* UIView+BuryingPoint.m */; };
+		DB6FC29D1EB0E4A800F06835 /* UIControl+BuryingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC29C1EB0E4A800F06835 /* UIControl+BuryingPoint.m */; };
+		DB6FC2A01EB0E4C400F06835 /* RCBPViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC29F1EB0E4C400F06835 /* RCBPViewModel.m */; };
+		DB6FC2A31EB0E4DF00F06835 /* RCBPControlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2A21EB0E4DF00F06835 /* RCBPControlModel.m */; };
+		DB6FC2A61EB0E54D00F06835 /* RCTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FC2A51EB0E54D00F06835 /* RCTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB2854111EB0E96A00B4D704 /* UITableView+BuryingPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BuryingPoint.h"; sourceTree = "<group>"; };
+		DB2854121EB0E96A00B4D704 /* UITableView+BuryingPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BuryingPoint.m"; sourceTree = "<group>"; };
+		DB2854141EB0F20000B4D704 /* detailPointText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = detailPointText.json; sourceTree = "<group>"; };
+		DB5F87371EC0A8EE00EB70F3 /* RCBPTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBPTableModel.h; sourceTree = "<group>"; };
+		DB5F87381EC0A8EE00EB70F3 /* RCBPTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBPTableModel.m; sourceTree = "<group>"; };
 		DB6FC2421EB0DE1500F06835 /* RCBuryingPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCBuryingPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6FC2461EB0DE1500F06835 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB6FC2481EB0DE1500F06835 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +67,22 @@
 		DB6FC2661EB0DE1500F06835 /* RCBuryingPointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCBuryingPointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6FC26A1EB0DE1500F06835 /* RCBuryingPointUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCBuryingPointUITests.m; sourceTree = "<group>"; };
 		DB6FC26C1EB0DE1500F06835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6FC2791EB0DE9800F06835 /* RCBPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBPConfig.h; sourceTree = "<group>"; };
+		DB6FC27A1EB0DE9800F06835 /* RCBPConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBPConfig.m; sourceTree = "<group>"; };
+		DB6FC2921EB0DF8900F06835 /* RCBPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBPManager.h; sourceTree = "<group>"; };
+		DB6FC2931EB0DF8900F06835 /* RCBPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBPManager.m; sourceTree = "<group>"; };
+		DB6FC2951EB0E2ED00F06835 /* RCBPBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBPBaseModel.h; sourceTree = "<group>"; };
+		DB6FC2961EB0E2ED00F06835 /* RCBPBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBPBaseModel.m; sourceTree = "<group>"; };
+		DB6FC2981EB0E49700F06835 /* UIView+BuryingPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BuryingPoint.h"; sourceTree = "<group>"; };
+		DB6FC2991EB0E49700F06835 /* UIView+BuryingPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BuryingPoint.m"; sourceTree = "<group>"; };
+		DB6FC29B1EB0E4A800F06835 /* UIControl+BuryingPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+BuryingPoint.h"; sourceTree = "<group>"; };
+		DB6FC29C1EB0E4A800F06835 /* UIControl+BuryingPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BuryingPoint.m"; sourceTree = "<group>"; };
+		DB6FC29E1EB0E4C400F06835 /* RCBPViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBPViewModel.h; sourceTree = "<group>"; };
+		DB6FC29F1EB0E4C400F06835 /* RCBPViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBPViewModel.m; sourceTree = "<group>"; };
+		DB6FC2A11EB0E4DF00F06835 /* RCBPControlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBPControlModel.h; sourceTree = "<group>"; };
+		DB6FC2A21EB0E4DF00F06835 /* RCBPControlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBPControlModel.m; sourceTree = "<group>"; };
+		DB6FC2A41EB0E54D00F06835 /* RCTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTools.h; sourceTree = "<group>"; };
+		DB6FC2A51EB0E54D00F06835 /* RCTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +113,7 @@
 		DB6FC2391EB0DE1500F06835 = {
 			isa = PBXGroup;
 			children = (
+				DB6FC2781EB0DE7700F06835 /* RCBPFrameWork */,
 				DB6FC2441EB0DE1500F06835 /* RCBuryingPoint */,
 				DB6FC25E1EB0DE1500F06835 /* RCBuryingPointTests */,
 				DB6FC2691EB0DE1500F06835 /* RCBuryingPointUITests */,
@@ -101,6 +134,7 @@
 		DB6FC2441EB0DE1500F06835 /* RCBuryingPoint */ = {
 			isa = PBXGroup;
 			children = (
+				DB2854141EB0F20000B4D704 /* detailPointText.json */,
 				DB6FC2481EB0DE1500F06835 /* AppDelegate.h */,
 				DB6FC2491EB0DE1500F06835 /* AppDelegate.m */,
 				DB6FC24B1EB0DE1500F06835 /* ViewController.h */,
@@ -138,6 +172,33 @@
 				DB6FC26C1EB0DE1500F06835 /* Info.plist */,
 			);
 			path = RCBuryingPointUITests;
+			sourceTree = "<group>";
+		};
+		DB6FC2781EB0DE7700F06835 /* RCBPFrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FC2791EB0DE9800F06835 /* RCBPConfig.h */,
+				DB6FC27A1EB0DE9800F06835 /* RCBPConfig.m */,
+				DB6FC2921EB0DF8900F06835 /* RCBPManager.h */,
+				DB6FC2931EB0DF8900F06835 /* RCBPManager.m */,
+				DB6FC2951EB0E2ED00F06835 /* RCBPBaseModel.h */,
+				DB6FC2961EB0E2ED00F06835 /* RCBPBaseModel.m */,
+				DB6FC2981EB0E49700F06835 /* UIView+BuryingPoint.h */,
+				DB6FC2991EB0E49700F06835 /* UIView+BuryingPoint.m */,
+				DB6FC29B1EB0E4A800F06835 /* UIControl+BuryingPoint.h */,
+				DB6FC29C1EB0E4A800F06835 /* UIControl+BuryingPoint.m */,
+				DB2854111EB0E96A00B4D704 /* UITableView+BuryingPoint.h */,
+				DB2854121EB0E96A00B4D704 /* UITableView+BuryingPoint.m */,
+				DB6FC29E1EB0E4C400F06835 /* RCBPViewModel.h */,
+				DB6FC29F1EB0E4C400F06835 /* RCBPViewModel.m */,
+				DB6FC2A11EB0E4DF00F06835 /* RCBPControlModel.h */,
+				DB6FC2A21EB0E4DF00F06835 /* RCBPControlModel.m */,
+				DB5F87371EC0A8EE00EB70F3 /* RCBPTableModel.h */,
+				DB5F87381EC0A8EE00EB70F3 /* RCBPTableModel.m */,
+				DB6FC2A41EB0E54D00F06835 /* RCTools.h */,
+				DB6FC2A51EB0E54D00F06835 /* RCTools.m */,
+			);
+			path = RCBPFrameWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +309,7 @@
 			files = (
 				DB6FC2551EB0DE1500F06835 /* LaunchScreen.storyboard in Resources */,
 				DB6FC2521EB0DE1500F06835 /* Assets.xcassets in Resources */,
+				DB2854151EB0F20000B4D704 /* detailPointText.json in Resources */,
 				DB6FC2501EB0DE1500F06835 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +335,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6FC27B1EB0DE9800F06835 /* RCBPConfig.m in Sources */,
 				DB6FC24D1EB0DE1500F06835 /* ViewController.m in Sources */,
+				DB6FC2941EB0DF8900F06835 /* RCBPManager.m in Sources */,
+				DB6FC29D1EB0E4A800F06835 /* UIControl+BuryingPoint.m in Sources */,
+				DB6FC2A61EB0E54D00F06835 /* RCTools.m in Sources */,
+				DB6FC2A31EB0E4DF00F06835 /* RCBPControlModel.m in Sources */,
+				DB6FC2971EB0E2ED00F06835 /* RCBPBaseModel.m in Sources */,
+				DB2854131EB0E96A00B4D704 /* UITableView+BuryingPoint.m in Sources */,
+				DB6FC29A1EB0E49700F06835 /* UIView+BuryingPoint.m in Sources */,
+				DB5F87391EC0A8EE00EB70F3 /* RCBPTableModel.m in Sources */,
 				DB6FC24A1EB0DE1500F06835 /* AppDelegate.m in Sources */,
+				DB6FC2A01EB0E4C400F06835 /* RCBPViewModel.m in Sources */,
 				DB6FC2471EB0DE1500F06835 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +581,7 @@
 				DB6FC2711EB0DE1500F06835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB6FC2721EB0DE1500F06835 /* Build configuration list for PBXNativeTarget "RCBuryingPointTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +590,7 @@
 				DB6FC2741EB0DE1500F06835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB6FC2751EB0DE1500F06835 /* Build configuration list for PBXNativeTarget "RCBuryingPointUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +599,7 @@
 				DB6FC2771EB0DE1500F06835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
