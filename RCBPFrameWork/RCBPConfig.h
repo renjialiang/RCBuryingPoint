@@ -11,6 +11,7 @@
 #define bpSubKey @"subkey"
 #define bpSubValue @"subvalue"
 #define bpCellIndexPath @"cellindexPath"
+#define bpCellCombine @"cellCombine"
 #define bpText @"bPText"
 
 typedef NS_OPTIONS(NSUInteger, BuryingPointStrategy)

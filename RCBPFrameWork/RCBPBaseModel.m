@@ -115,16 +115,27 @@
     BOOL isMD = NO;
     if ([dict objectForKey:bpCellIndexPath])
     {
-        NSArray *pathStringArray = [[dict objectForKey:bpCellIndexPath] componentsSeparatedByString:@"_"];
-        NSIndexPath *path = [NSIndexPath indexPathForRow:[[pathStringArray lastObject] integerValue] inSection:[[pathStringArray firstObject] integerValue]];
-        isMD = ([((RCBPTableModel *)self).selectedPath compare:path] == NSOrderedSame) ? YES : NO;
+        isMD = ([((RCBPTableModel *)self).selectedPath compare:[self getFromConfigUserData:[dict objectForKey:bpCellIndexPath]]] == NSOrderedSame) ? YES : NO;
     }
     NSString *key = [dict objectForKey:bpSubKey];
     if (key.length > 0) {
         @try
         {
-            if ([[dict objectForKey:bpSubValue] isEqualToString:[objc valueForKeyPath:key]]) {
-                isMD = YES;
+            id value = [objc valueForKeyPath:key];
+            if ([value isKindOfClass:[NSNumber class]])
+            {
+                value = [value stringValue];
+            }
+            if ([[dict objectForKey:bpSubValue] isEqualToString:value])
+            {
+                if ([dict objectForKey:bpCellCombine])
+                {
+                    isMD = ([((RCBPTableModel *)self).selectedPath compare:[self getFromConfigUserData:[dict objectForKey:bpCellCombine]]] == NSOrderedSame) ? YES : NO;
+                }
+                else
+                {
+                    isMD = YES;
+                }
             }
         }
         @catch (NSException *exception) {
@@ -135,6 +146,13 @@
         }
     }
     return isMD;
+}
+
+- (NSIndexPath *)getFromConfigUserData:(NSString *)indexPathStr
+{
+    NSArray *pathStringArray = [indexPathStr componentsSeparatedByString:@"_"];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:[[pathStringArray lastObject] integerValue] inSection:[[pathStringArray firstObject] integerValue]];
+    return path;
 }
 
 @end

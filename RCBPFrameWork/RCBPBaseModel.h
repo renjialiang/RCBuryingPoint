@@ -12,7 +12,7 @@
 
 @interface RCBPBaseModel : NSObject
 
-+ (nullable instancetype)initMaiDianWithType:(BuryPointType)type params:(NSDictionary *)dic;
++ (nullable instancetype)initMaiDianWithType:(BuryPointType)type params:(NSDictionary * _Nullable )dic;
 
 @property (nonatomic, assign) BuryingPointStrategy strategy;
 
