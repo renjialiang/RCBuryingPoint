@@ -15,12 +15,15 @@
 
 + (void)load
 {
-    [RCTools SwizzlingClass:[self class] originalSelector:@selector(sendAction:to:forEvent:) swizzleMethod:@selector(sendActionMD:to:forEvent:)];
+    if ([[[[NSBundle mainBundle] infoDictionary] objectForKey:@"BPFunction"] boolValue])
+    {
+        [RCTools SwizzlingClass:[self class] originalSelector:@selector(sendAction:to:forEvent:) swizzleMethod:@selector(sendActionMD:to:forEvent:)];
+    }
 }
 
 - (void)sendActionMD:(SEL)action to:(id)target forEvent:(UIEvent *)event
 {
-    [[RCBPManager shareInstance] searchWithConfigFile:self sel:action className:[NSString stringWithUTF8String:class_getName([target class])] mdType:UIControlMaiDian exParams:nil];
+    [[RCBPManager shareInstance] searchWithConfigFile:self sel:action className:[NSString stringWithUTF8String:class_getName([target class])] mdType:UIControlABCS exParams:nil];
     [self sendActionMD:action to:target forEvent:event];
 }
 

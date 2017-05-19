@@ -18,10 +18,14 @@
 
 @property (nonatomic, assign) NSUInteger deepSuperHeight;
 
+- (nullable instancetype)initWithParams:(NSDictionary *_Nullable)dict;
+
 - (nullable NSString *)searchWithConfigFile:(nonnull id)objc sel:(nonnull SEL)action className:(nonnull NSString *)name;
 
 - (nonnull NSString *)deepGetSuperView:(nonnull id)objc deepHeight:(NSUInteger)dHeight;
 
 - (nullable NSString *)superPathStrategy:(nonnull NSArray *)array object:(nonnull id)objc deepH:(NSUInteger)height;
+
+- (NSIndexPath *_Nullable)getSpecialModel;
 
 @end

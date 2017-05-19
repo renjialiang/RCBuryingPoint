@@ -12,6 +12,7 @@
 #import "RCBPViewModel.h"
 #import "RCBPControlModel.h"
 #import "RCBPTableModel.h"
+#import "RCBPCollecionModel.h"
 
 @implementation RCBPBaseModel
 
@@ -19,14 +20,17 @@
 {
     RCBPBaseModel *strategyBase = nil;
     switch (type) {
-        case UIControlMaiDian:
+        case UIViewABCS:
             strategyBase = [[RCBPViewModel alloc]init];
             break;
-        case UIViewMaiDian:
+        case UIControlABCS:
             strategyBase = [[RCBPControlModel alloc]init];
             break;
-        case UITableViewMaiDian:
+        case UITableViewABCS:
             strategyBase = [[RCBPTableModel alloc]initWithParams:dic];
+            break;
+        case UICollectionViewABCS:
+            strategyBase = [[RCBPCollecionModel alloc]initWithParams:dic];
             break;
         default:
             break;
@@ -115,7 +119,9 @@
     BOOL isMD = NO;
     if ([dict objectForKey:bpCellIndexPath])
     {
-        isMD = ([((RCBPTableModel *)self).selectedPath compare:[self getFromConfigUserData:[dict objectForKey:bpCellIndexPath]]] == NSOrderedSame) ? YES : NO;
+        if ([self getSpecialModel]) {
+            isMD = ([[self getSpecialModel] compare:[self getFromConfigUserData:[dict objectForKey:bpCellIndexPath]]] == NSOrderedSame) ? YES : NO;
+        }
     }
     NSString *key = [dict objectForKey:bpSubKey];
     if (key.length > 0) {
@@ -153,6 +159,16 @@
     NSArray *pathStringArray = [indexPathStr componentsSeparatedByString:@"_"];
     NSIndexPath *path = [NSIndexPath indexPathForRow:[[pathStringArray lastObject] integerValue] inSection:[[pathStringArray firstObject] integerValue]];
     return path;
+}
+
+- (instancetype)initWithParams:(NSDictionary *)dict
+{
+    return nil;
+}
+
+- (NSIndexPath *)getSpecialModel
+{
+    return nil;
 }
 
 @end

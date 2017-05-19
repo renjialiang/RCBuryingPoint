@@ -13,9 +13,19 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (void)viewWillAppear:(BOOL)animated
+{
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    //列距
+    flowLayout.minimumInteritemSpacing = 5;
+    //行距
+    flowLayout.minimumLineSpacing = 5;
+    flowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    flowLayout.itemSize = CGSizeMake((self.collection.frame.size.width - (6 * 10)) / 5 , (self.collection.frame.size.height - 40) / 2);
+    NSLog(@"%@",NSStringFromCGSize(flowLayout.itemSize));
+    //初始化
+    [self.collection setCollectionViewLayout:flowLayout];
+    [self.collection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionCell"];
 }
 
 -(void)btnSendMessage:(id)sender
@@ -28,10 +38,9 @@
     NSLog(@"%@",((UIButton *)sender).currentTitle);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
+#pragma mark - UITableView
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -50,14 +59,41 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:bpCell];
     }
-    cell.textLabel.text = @"asdf";
+    cell.backgroundColor = [UIColor grayColor];
+    cell.textLabel.text = @"RCTableViewCell";
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"adfas");
+    NSLog(@"UITableViewCell-%ld-%ld", indexPath.section, indexPath.row);
 }
+
+
+#pragma mark - UICollectionView
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 2;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor brownColor];
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"UICollectionViewCell-%ld-%ld", indexPath.section, indexPath.row);
+}
+
 
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITableView (BuryingPoint) <UITableViewDelegate>
+@interface UITableView (BuryingPoint)
 
 @end

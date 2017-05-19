@@ -24,6 +24,51 @@
 				"bPText":"bpPathKvc2"
 			}
 		],
+        "UIWindow_UIView_UICollectionView_UICollectionViewCell":
+        [
+            {
+                 "1":
+                 {
+                    "cellindexPath":"0_0",
+                 },
+                "bPText":"bpCollectionKvc0"
+            },
+            {
+                 "1":
+                 {
+                    "cellindexPath":"0_1",
+                 },
+                 "bPText":"bpCollectionKvc1"
+            },
+            {
+                 "1":
+                 {
+                    "cellindexPath":"0_2",
+                 },
+                 "bPText":"bpCollectionKvc2"
+            },
+            {
+                 "1":
+                 {
+                    "cellindexPath":"0_3",
+                 },
+                 "bPText":"bpCollectionKvc3"
+            },
+            {
+                 "1":
+                 {
+                    "cellindexPath":"0_4",
+                 },
+                 "bPText":"bpCollectionKvc4"
+             },
+            {
+                "1":
+                {
+                    "cellindexPath":"1_4",
+                },
+                "bPText":"bpCollectionKvc9"
+            }
+        ],
         "UIWindow_UIView_UITableView_UITableViewWrapperView_UITableViewCell":
         [
             {

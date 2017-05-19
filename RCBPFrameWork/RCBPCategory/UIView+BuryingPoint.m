@@ -27,7 +27,7 @@ static void *weakGesture = &weakGesture;
 
 - (void)mdGestureItem:(UIGestureRecognizer *)gesture
 {
-    [[RCBPManager shareInstance] searchWithConfigFile:self.viewObject sel:self.action className:[NSString stringWithUTF8String:class_getName([self.target class])] mdType:UIViewMaiDian exParams:nil];
+    [[RCBPManager shareInstance] searchWithConfigFile:self.viewObject sel:self.action className:[NSString stringWithUTF8String:class_getName([self.target class])] mdType:UIViewABCS exParams:nil];
     [self.target performSelector:self.action withObject:gesture];
 }
 
@@ -37,7 +37,10 @@ static void *weakGesture = &weakGesture;
 
 + (void)load
 {
-    [RCTools SwizzlingClass:[self class] originalSelector:@selector(addGestureRecognizer:) swizzleMethod:@selector(addBPGestureRecognizer:)];
+    if ([[[[NSBundle mainBundle] infoDictionary] objectForKey:@"BPFunction"] boolValue])
+    {
+        [RCTools SwizzlingClass:[self class] originalSelector:@selector(addGestureRecognizer:) swizzleMethod:@selector(addBPGestureRecognizer:)];
+    }
 }
 
 - (void)addBPGestureRecognizer:(UIGestureRecognizer*)gestureRecognizer

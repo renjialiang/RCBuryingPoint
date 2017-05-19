@@ -13,4 +13,6 @@
 
 + (void)SwizzlingClass:(Class)cls originalSelector:(SEL)orSlt swizzleMethod:(SEL)swSlt;
 
+void exChangeMethod(Class originalClass, SEL originalSEL, Class replacedClass, SEL replacedSEL);
+
 @end

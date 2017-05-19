@@ -43,6 +43,7 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             NSString* text = [model searchWithConfigFile:objc sel:action className:name];
             if (text) {
+                NSLog(@"buryingPointText:%@",text);
                 [weakSelf.textArray addObject:text];
             }
         });

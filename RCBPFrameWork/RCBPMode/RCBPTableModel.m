@@ -27,4 +27,9 @@
     return self;
 }
 
+- (NSIndexPath *)getSpecialModel
+{
+    return self.selectedPath;
+}
+
 @end

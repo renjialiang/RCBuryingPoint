@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, BuryPointType) {
-    UIControlMaiDian = 1,
-    UIViewMaiDian = 2,
-    UITableViewMaiDian = 3
+    UIControlABCS = 1,
+    UIViewABCS = 2,
+    UITableViewABCS = 3,
+    UICollectionViewABCS = 4
 };
 
 @interface RCBPManager : NSObject
