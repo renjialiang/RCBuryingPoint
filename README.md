@@ -1,8 +1,8 @@
-# RCBuryingPoint
-数据收集之SDK
-1.针对UIControl消息事件、UIView手势事件、UITableView和UICollectionView点击事件进行Hook并搜索匹配消息。
-2.通过配置文件进行消息录入
-3.通过KVC对深层次消息主体判别
+# RCBuryingPoint 数据收集之SDK
+
+# 1.针对UIControl消息事件、UIView手势事件、UITableView和UICollectionView点击事件进行Hook并搜索匹配消息。
+# 2.通过配置文件进行消息录入
+# 3.通过KVC对深层次消息主体判别
 
 
 配置Json:
