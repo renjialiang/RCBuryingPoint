@@ -11,5 +11,9 @@
 @interface RCBPTableModel : RCBPBaseModel
 
 @property (nonatomic, strong, readonly) NSIndexPath *selectedPath;
+//
+- (BOOL)matchingCell:(NSDictionary *)dict;
+
+- (BOOL)matchingComBineCell:(NSDictionary *)dict;
 
 @end

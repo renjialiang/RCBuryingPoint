@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RCBPConfig.h"
 
-typedef NS_ENUM(NSUInteger, BuryPointType) {
-    UIControlABCS = 1,
-    UIViewABCS = 2,
-    UITableViewABCS = 3,
-    UICollectionViewABCS = 4
-};
+@class RCBPManager;
+@protocol RCBPManagerDelegate <NSObject>
+@optional
+- (void)maiDianManager:(RCBPManager *_Nonnull)mgr shouldPostMaiDian:(NSString *_Nullable)str;
+@end
 
 @interface RCBPManager : NSObject
 
@@ -21,5 +21,8 @@ typedef NS_ENUM(NSUInteger, BuryPointType) {
 
 - (void)searchWithConfigFile:(nonnull id)objc sel:(nonnull SEL)action className:(nonnull NSString *)name mdType:(BuryPointType)type exParams:(nullable NSDictionary *)dict;
 
+- (void)setConfigFile:(NSString *_Nonnull)file;
+
+@property (nonatomic, weak) _Nullable id<RCBPManagerDelegate> delegate;
 
 @end

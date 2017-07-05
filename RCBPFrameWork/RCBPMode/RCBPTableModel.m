@@ -16,20 +16,29 @@
 
 @implementation RCBPTableModel
 
-- (instancetype)initWithParams:(NSDictionary *)dict
+- (instancetype)initWithObjc:(id)objc params:(NSDictionary *)dict
 {
     self = [super init];
     if (self) {
         self.strategy = BuryingPointStrategySEL | BuryingPointStrategySuperPath;
-        self.deepSuperHeight = 5;
         self.selectedPath = dict[@"BPTableViewCellIndexPath"];
+        [self initSaveDeepViewObjc:objc];
     }
     return self;
 }
 
-- (NSIndexPath *)getSpecialModel
+- (BOOL)matchingCell:(NSDictionary *)dict
 {
-    return self.selectedPath;
+    NSArray *pathArray = [[dict objectForKey:bpCellIndexPath] componentsSeparatedByString:@"_"];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:[[pathArray lastObject] integerValue] inSection:[[pathArray firstObject] integerValue]];
+    return  ([self.selectedPath compare:path] == NSOrderedSame) ? YES : NO;
+}
+
+- (BOOL)matchingComBineCell:(NSDictionary *)dict
+{
+    NSArray *pathArray = [[dict objectForKey:bpCellCombine] componentsSeparatedByString:@"_"];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:[[pathArray lastObject] integerValue] inSection:[[pathArray firstObject] integerValue]];
+    return  ([self.selectedPath compare:path] == NSOrderedSame) ? YES : NO;
 }
 
 @end

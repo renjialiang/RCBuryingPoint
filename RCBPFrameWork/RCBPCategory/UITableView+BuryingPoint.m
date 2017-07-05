@@ -15,7 +15,7 @@
 @end
 
 @implementation BPUITableViewDelegateHook
-
+//
 - (void)tableViewBP:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
@@ -23,6 +23,7 @@
     [self tableViewBP:tableView didSelectRowAtIndexPath:indexPath];
 }
 
+//替换table点击方法
 + (void)enableHookUITableViewDelegateMethod:(Class)aClass {
     exChangeMethod(aClass, @selector(tableView:didSelectRowAtIndexPath:), [self class], @selector(tableViewBP:didSelectRowAtIndexPath:));
 }
@@ -41,6 +42,7 @@
     }
 }
 
+//替换Table代理
 - (void)setBPDelegate:(id<UITableViewDelegate>)delegate
 {
     [self setBPDelegate:delegate];

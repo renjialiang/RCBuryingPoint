@@ -12,20 +12,22 @@
 
 @interface RCBPBaseModel : NSObject
 
-+ (nullable instancetype)initMaiDianWithType:(BuryPointType)type params:(NSDictionary * _Nullable )dic;
-
 @property (nonatomic, assign) BuryingPointStrategy strategy;
 
 @property (nonatomic, assign) NSUInteger deepSuperHeight;
 
-- (nullable instancetype)initWithParams:(NSDictionary *_Nullable)dict;
+@property (nonatomic, strong, readonly) NSMutableArray * _Nonnull deepViewArray;
 
+//初始化Model
++ (nullable instancetype)initMaiDianWithType:(BuryPointType)type objcClass:(nonnull id)objc params:(NSDictionary * _Nullable )dic;
+
+//创建model对象
+- (nullable instancetype)initWithObjc:(nonnull id)objc params:(NSDictionary *_Nullable)dict;
+
+//保存view对象
+- (void)initSaveDeepViewObjc:(id _Nonnull )objc;
+
+//搜索对应匹配的字符串
 - (nullable NSString *)searchWithConfigFile:(nonnull id)objc sel:(nonnull SEL)action className:(nonnull NSString *)name;
-
-- (nonnull NSString *)deepGetSuperView:(nonnull id)objc deepHeight:(NSUInteger)dHeight;
-
-- (nullable NSString *)superPathStrategy:(nonnull NSArray *)array object:(nonnull id)objc deepH:(NSUInteger)height;
-
-- (NSIndexPath *_Nullable)getSpecialModel;
 
 @end

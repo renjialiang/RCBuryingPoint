@@ -16,20 +16,15 @@
 
 @implementation RCBPCollecionModel
 
-- (instancetype)initWithParams:(NSDictionary *)dict
+- (instancetype)initWithObjc:(id)objc params:(NSDictionary *)dict
 {
     self = [super init];
     if (self) {
         self.strategy = BuryingPointStrategySEL | BuryingPointStrategySuperPath;
-        self.deepSuperHeight = 5;
         self.selectedPath = dict[@"BPCollectionCellIndexPath"];
+        [self initSaveDeepViewObjc:objc];
     }
     return self;
-}
-
-- (NSIndexPath *)getSpecialModel
-{
-    return self.selectedPath;
 }
 
 @end

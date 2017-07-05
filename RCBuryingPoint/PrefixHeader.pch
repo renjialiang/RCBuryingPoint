@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  RCBuryingPoint
+//
+//  Created by lichen on 2017/7/5.
+//  Copyright © 2017年 RenJialiang. All rights reserved.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import "RCMacro.h"
+    #import <UIKit/UIKit.h>
+#endif
+

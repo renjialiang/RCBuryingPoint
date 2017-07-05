@@ -14,28 +14,65 @@
 #import "RCBPTableModel.h"
 #import "RCBPCollecionModel.h"
 
+@interface RCBPBaseModel ()
+
+@property (nonatomic, strong) NSMutableArray *deepViewArray;
+
+@end
+
 @implementation RCBPBaseModel
 
-+ (instancetype)initMaiDianWithType:(BuryPointType)type params:(NSDictionary *)dic
+delay_property_impl(NSMutableArray, deepViewArray)
+
++ (instancetype)initMaiDianWithType:(BuryPointType)type objcClass:(id)objc params:(NSDictionary *)dic
 {
     RCBPBaseModel *strategyBase = nil;
     switch (type) {
         case UIViewABCS:
-            strategyBase = [[RCBPViewModel alloc]init];
+            strategyBase = [[RCBPViewModel alloc]initWithObjc:objc params:dic];
             break;
         case UIControlABCS:
-            strategyBase = [[RCBPControlModel alloc]init];
+            strategyBase = [[RCBPControlModel alloc]initWithObjc:objc params:dic];
             break;
         case UITableViewABCS:
-            strategyBase = [[RCBPTableModel alloc]initWithParams:dic];
+            strategyBase = [[RCBPTableModel alloc]initWithObjc:objc params:dic];
             break;
         case UICollectionViewABCS:
-            strategyBase = [[RCBPCollecionModel alloc]initWithParams:dic];
+            strategyBase = [[RCBPCollecionModel alloc]initWithObjc:objc params:dic];
             break;
         default:
             break;
     }
     return strategyBase;
+}
+
+
+- (nullable instancetype)initWithObjc:(nonnull id)objc params:(NSDictionary *_Nullable)dict;
+{
+    // subClass Impl
+    return nil;
+}
+
+- (void)initSaveDeepViewObjc:(id)objc
+{
+    [self.deepViewArray removeAllObjects];
+    NSUInteger deep = 1;
+    UIView *superView = objc;
+    [self.deepViewArray addObject:superView];
+    while (deep < 100)
+    {
+        if (superView.superview)
+        {
+            if ([[RCBPConfig shareInstance] isConfigTopSuper:NSStringFromClass([superView.superview class])])
+            {
+                break;
+            }
+            [self.deepViewArray addObject:superView.superview];
+        }
+        superView = superView.superview;
+        deep++;
+    }
+    self.deepSuperHeight = deep;
 }
 
 - (NSString *)searchWithConfigFile:(id)objc sel:(SEL)action className:(NSString *)name
@@ -45,38 +82,40 @@
         NSString *spliceStr = [name stringByAppendingString:[NSString stringWithFormat:@"_%@",NSStringFromSelector(action)]];
         NSDictionary *dict = [[RCBPConfig shareInstance] searchMaiDianSELStrategy];
         if ([dict objectForKey:spliceStr]) {
-            return [dict objectForKey:spliceStr];
+            returnText = [dict objectForKey:spliceStr];
         }
     }
     if (self.strategy & BuryingPointStrategySuperPath) {
         NSString *superPathText = nil;
-        NSArray *array = [[RCBPConfig shareInstance] searchMaiDianSUPERPATHStrategy:[self deepGetSuperView:objc deepHeight:self.deepSuperHeight]];
+        NSArray *array = [[RCBPConfig shareInstance] searchMaiDianSUPERPATHStrategy:[self deepGetSuperView]];
         if (array.count > 0) {
             superPathText = [self superPathStrategy:array object:objc deepH:self.deepSuperHeight];
             if (superPathText) {
-                return superPathText;
+                returnText = superPathText;
             }
         }
     }
+    [self.deepViewArray removeAllObjects];
     return returnText;
 }
 
-- (NSString *)deepGetSuperView:(id)objc deepHeight:(NSUInteger)dHeight
+#pragma mark Private-Method
+//获取SuperView字符串
+- (NSString *)deepGetSuperView
 {
-    NSUInteger deep = 1;
-    NSString *superViewAllText = [NSString stringWithUTF8String:class_getName([objc class])];
-    UIView *superView = objc;
-    while (deep < dHeight)
+    NSString *superViewAllText = nil;
+    if (self.deepViewArray && self.deepViewArray.count > 0)
     {
-        if (superView.superview) {
-            superViewAllText = [[NSString stringWithUTF8String:class_getName([superView.superview class])] stringByAppendingString:[NSString stringWithFormat:@"_%@",superViewAllText]];
+        superViewAllText = [NSString stringWithUTF8String:class_getName([[self.deepViewArray firstObject] class])];
+        for (NSUInteger i = 1; i < self.deepViewArray.count; i++)
+        {
+            superViewAllText = [[NSString stringWithUTF8String:class_getName([[self.deepViewArray objectAtIndex:i] class])] stringByAppendingString:[NSString stringWithFormat:@"_%@",superViewAllText]];
         }
-        superView = superView.superview;
-        deep++;
     }
     return superViewAllText;
 }
 
+//匹配路径对应的配置文本
 - (NSString *)superPathStrategy:(NSArray *)array object:(id)objc deepH:(NSUInteger)height;
 {
     NSString *returnText = nil;
@@ -88,7 +127,7 @@
         {
             NSDictionary *subSubDict = [subDict objectForKey:[NSString stringWithFormat:@"%d",j]];
             if (subSubDict) {
-                id superObjc = [self getSuperViewFormObjc:objc superDeep:j];
+                id superObjc = [self getSuperViewFormSuperDeep:j - 1];
                 matchFlag = [self justObjcHaveMaiDian:superObjc keyValueDict:subSubDict];
                 if (!matchFlag) {
                     break;
@@ -103,24 +142,25 @@
     return returnText;
 }
 
-
-- (id)getSuperViewFormObjc:(id)objc superDeep:(NSUInteger)deep
+//获取路径对应的对象
+- (id)getSuperViewFormSuperDeep:(NSUInteger)deep
 {
-    UIView *view = objc;
-    for (int i = 1; i < deep; i++)
+    if (self.deepViewArray.count > deep)
     {
-        view = view.superview;
+        return [self.deepViewArray objectAtIndex:deep];
     }
-    return view;
+    return nil;
 }
 
+//通过配置信息查找
 - (BOOL)justObjcHaveMaiDian:(id)objc keyValueDict:(NSDictionary *)dict
 {
     BOOL isMD = NO;
     if ([dict objectForKey:bpCellIndexPath])
     {
-        if ([self getSpecialModel]) {
-            isMD = ([[self getSpecialModel] compare:[self getFromConfigUserData:[dict objectForKey:bpCellIndexPath]]] == NSOrderedSame) ? YES : NO;
+        if ([self isKindOfClass:[RCBPTableModel class]])
+        {
+            isMD = [((RCBPTableModel*)self) matchingCell:dict];
         }
     }
     NSString *key = [dict objectForKey:bpSubKey];
@@ -136,7 +176,10 @@
             {
                 if ([dict objectForKey:bpCellCombine])
                 {
-                    isMD = ([((RCBPTableModel *)self).selectedPath compare:[self getFromConfigUserData:[dict objectForKey:bpCellCombine]]] == NSOrderedSame) ? YES : NO;
+                    if ([self isKindOfClass:[RCBPTableModel class]])
+                    {
+                        isMD = [((RCBPTableModel*)self) matchingComBineCell:dict];
+                    }
                 }
                 else
                 {
@@ -152,23 +195,6 @@
         }
     }
     return isMD;
-}
-
-- (NSIndexPath *)getFromConfigUserData:(NSString *)indexPathStr
-{
-    NSArray *pathStringArray = [indexPathStr componentsSeparatedByString:@"_"];
-    NSIndexPath *path = [NSIndexPath indexPathForRow:[[pathStringArray lastObject] integerValue] inSection:[[pathStringArray firstObject] integerValue]];
-    return path;
-}
-
-- (instancetype)initWithParams:(NSDictionary *)dict
-{
-    return nil;
-}
-
-- (NSIndexPath *)getSpecialModel
-{
-    return nil;
 }
 
 @end

@@ -10,12 +10,12 @@
 
 @implementation RCBPControlModel
 
-- (instancetype)init
+- (instancetype)initWithObjc:(id)objc params:(NSDictionary *)dict
 {
     self = [super init];
     if (self) {
         self.strategy = BuryingPointStrategySEL | BuryingPointStrategySuperPath;
-        self.deepSuperHeight = 3;
+        [self initSaveDeepViewObjc:objc];
     }
     return self;
 }

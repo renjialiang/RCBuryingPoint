@@ -43,6 +43,7 @@ static void *weakGesture = &weakGesture;
     }
 }
 
+//替换View手势
 - (void)addBPGestureRecognizer:(UIGestureRecognizer*)gestureRecognizer
 {
     Ivar targetsIvar = class_getInstanceVariable([UIGestureRecognizer class], "_targets");

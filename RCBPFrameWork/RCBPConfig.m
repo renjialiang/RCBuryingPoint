@@ -12,25 +12,41 @@
 
 @property (nonatomic, strong) NSMutableDictionary *mdConfigDict;
 
+@property (nonatomic, strong) NSMutableArray *mdDeepTopClassArray;
+
 @end
 
 @implementation RCBPConfig
 
-+(instancetype)shareInstance
++ (instancetype)shareInstance
 {
     static dispatch_once_t once;
     static RCBPConfig *manager;
     dispatch_once(&once, ^{
         manager = [[RCBPConfig alloc]init];
-        manager.mdConfigDict = [manager paserJsonConfig];
     });
     return manager;
+}
+
+- (NSMutableDictionary *)mdConfigDict{
+    if (!_mdConfigDict) {
+        _mdConfigDict = [self paserJsonConfig];
+    }
+    return _mdConfigDict;
+}
+
+- (NSMutableArray *)mdDeepTopClassArray
+{
+    if (_mdDeepTopClassArray == nil) {
+        _mdDeepTopClassArray = [[NSMutableArray alloc]initWithArray:[self getSuperTopClassArray]];
+    }
+    return _mdDeepTopClassArray;
 }
 
 - (nonnull NSMutableDictionary *)paserJsonConfig
 {
     NSError *jsonError = nil;
-    NSData *maiDianData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detailPointText" ofType:@"json"]];
+    NSData *maiDianData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:self.configFile ofType:nil]];
     if (maiDianData)
     {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:maiDianData options:NSJSONReadingAllowFragments error:&jsonError];
@@ -57,5 +73,29 @@
     return superArray;
 }
 
+- (NSArray *)getSuperTopClassArray
+{
+    if ([self.mdConfigDict objectForKey:@"TOPDEEP"]) {
+        NSString *topDeep = [self.mdConfigDict objectForKey:@"TOPDEEP"];
+        if (topDeep.length > 0) {
+            return [topDeep componentsSeparatedByString:@","];
+        }
+    }
+    return @[];
+}
+
+- (BOOL)isConfigTopSuper:(NSString *)cls
+{
+    BOOL flag = NO;
+    for (NSString *str in self.mdDeepTopClassArray)
+    {
+        if ([str isEqualToString:cls])
+        {
+            flag = YES;
+            break;
+        }
+    }
+    return flag;
+}
 
 @end

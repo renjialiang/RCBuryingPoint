@@ -7,11 +7,25 @@
 //
 
 #import "ViewController.h"
-@interface ViewController ()
+#import "RCBPManager.h"
+@interface ViewController () <RCBPManagerDelegate>
 
 @end
 
 @implementation ViewController
+#pragma mark - RCBPManagerDelegate
+- (void)maiDianManager:(RCBPManager *_Nonnull)mgr shouldPostMaiDian:(NSString *_Nullable)str
+{
+    NSLog(@"%@",str);
+}
+
+
+- (void)viewDidLoad
+{
+    [RCBPManager shareInstance].delegate = self;
+    [[RCBPManager shareInstance] setConfigFile:@"detailPointText.json"];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
